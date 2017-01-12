@@ -1,5 +1,8 @@
 package nyc.c4q.wesniemarcelin.keyboardkeyexam.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -7,8 +10,12 @@ import java.util.List;
  */
 
 public class KeyResponse {
+    @SerializedName("success")
+    @Expose
     private boolean success;
-    private List<AvailableKey> availableKeys;
+    @SerializedName("available keys")
+    @Expose
+    private List<AvailableKey> availableKeys = null;
 
     public boolean isSuccess() {
         return success;
@@ -25,4 +32,5 @@ public class KeyResponse {
     public void setAvailableKeys(List<AvailableKey> availableKeys) {
         this.availableKeys = availableKeys;
     }
+
 }

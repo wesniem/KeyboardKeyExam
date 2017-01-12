@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KeyboardKeyExam</string>
+    <string name="press_back">Please press again to view the key list</string>
 </resources>

@@ -9,6 +9,6 @@ import retrofit2.http.GET;
  */
 
 public interface KeyService {
-    @GET(" ")
+    @GET("cgi-bin/1_11_2017_exam.pl/")
     Call<KeyResponse> getKeys();
 }
