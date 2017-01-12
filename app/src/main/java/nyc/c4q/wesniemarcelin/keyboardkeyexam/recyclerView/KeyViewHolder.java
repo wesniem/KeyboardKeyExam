@@ -20,7 +20,6 @@ import nyc.c4q.wesniemarcelin.keyboardkeyexam.model.AvailableKey;
  */
 
 public class KeyViewHolder extends RecyclerView.ViewHolder {
-//    ImageView keyView;
     TextView keyText;
     RecyclerView keyRv;
     Context context;
@@ -30,13 +29,12 @@ public class KeyViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         view = itemView;
         keyRv = (RecyclerView) itemView.findViewById(R.id.key_recyclerView);
-//        keyView = (ImageView) itemView.findViewById(R.id.key_image);
         keyText = (TextView) itemView.findViewById(R.id.key_text);
         context = itemView.getContext();
     }
 
     public void bind(final AvailableKey availableKey) {
-//        Picasso.with(context).load(availableKey.getUrl()).into(keyView);
+
         keyText.setTextColor(Color.parseColor(availableKey.getTextColor()));
         keyText.setText(availableKey.getName());
         view.setOnClickListener(new View.OnClickListener() {

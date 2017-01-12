@@ -53,21 +53,19 @@ public class KeyFragment extends Fragment {
         call.enqueue(new Callback<KeyResponse>() {
             @Override
             public void onResponse(Call<KeyResponse> call, Response<KeyResponse> response) {
-                if(response.isSuccessful()){
-                    Log.d("Success","in there");
+                if (response.isSuccessful()) {
+                    Log.d("Success", "in there");
                     Log.d("YOOO", "POJO" + response.body());
 
                     KeyResponse keyResponse = response.body();
                     mKeyList = keyResponse.getAvailableKeys();
-
-//                    Log.d("POJO", mKeyList.get(0).getName());
 
                     keyRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                     KeyAdapter adapter = new KeyAdapter(mKeyList);
                     keyRecyclerView.setAdapter(adapter);
 
                     Log.d("Adapter", "adapter attached");
-                }else{
+                } else {
                     try {
                         Log.d("Error ", "Message" + response.errorBody().string());
                     } catch (IOException e) {

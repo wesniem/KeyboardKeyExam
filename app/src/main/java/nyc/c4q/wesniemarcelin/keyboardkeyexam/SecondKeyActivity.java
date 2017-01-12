@@ -2,7 +2,6 @@ package nyc.c4q.wesniemarcelin.keyboardkeyexam;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -15,8 +14,11 @@ import com.squareup.picasso.Picasso;
  */
 
 public class SecondKeyActivity extends AppCompatActivity {
+
+    private static final String PHOTO_BASE_URL = "http://jsjrobotics.nyc";
     boolean doubleBackToExitPressedOnce = false;
     ImageView mImage;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +27,10 @@ public class SecondKeyActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String url = intent.getStringExtra("image");
         Bundle picUrl = intent.getExtras();
-        if(picUrl!=null){
-        Picasso.with(SecondKeyActivity.this)
-                .load("http://jsjrobotics.nyc" + url)
-                .into(mImage);
+        if (picUrl != null) {
+            Picasso.with(SecondKeyActivity.this)
+                    .load(PHOTO_BASE_URL + url)
+                    .into(mImage);
         }
 
     }
