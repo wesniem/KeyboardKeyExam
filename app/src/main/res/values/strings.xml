@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">KeyboardKeyExam</string>
     <string name="press_back">Please press again to view the key list</string>
+    <string name="text_keys">List of keys</string>
+    <string name="key_text">Click on any of the following to view the corresponding image</string>
 </resources>

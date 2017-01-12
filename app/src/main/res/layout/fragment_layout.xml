@@ -2,6 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/text"
+        android:textAlignment="center"
+        android:text="@string/text_keys"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/key_words"
+        android:text="@string/key_text"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/key_recyclerView"
